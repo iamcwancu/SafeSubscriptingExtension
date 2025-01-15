@@ -92,3 +92,10 @@ extension RangeReplaceableCollection {
         }
     }
 }
+
+extension Collection {
+    /// Safely checks if an index is within the bounds of the collection.
+    func isValidIndex(_ index: Index) -> Bool {
+        return indices.contains(index)
+    }
+}
